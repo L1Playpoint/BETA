@@ -37,7 +37,7 @@ export default function Answer() {
             </div>
         </form>
         <Button><Link to="/pool/duo">Go Back</Link></Button>
-        <Button><Link to="/pool/duo">Compete</Link></Button>
+        <Button><Link to="/pool/duo/compete">Compete</Link></Button>
     </div>
   )
 }

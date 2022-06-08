@@ -72,7 +72,7 @@ export default function Compete() {
             </div>
         </form>
         </div>
-        <Button style={{marginTop: 50}} type='primary'><Link to="/pool/duo">Submit</Link></Button>
+        <Button style={{marginTop: 50}} type='primary'><Link to="/">Submit</Link></Button>
     </div>
   )
 }
