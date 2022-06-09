@@ -29,8 +29,8 @@ const columns = [
     render: (_, record) => (
       <Space size="middle">
         <Button><Link to="/pool/duo/answer">View Answer</Link></Button>
-        <Button><Link to="/pool/duo/compete">Mark me Open</Link></Button>
-        <Button><Link to="/pool/duo/compete">Compete</Link></Button>
+        <Button><Link to="/pool/duo/compete/false">Mark me Open</Link></Button>
+        <Button><Link to="/pool/duo/compete/true">Compete</Link></Button>
       </Space>
     ),
   },

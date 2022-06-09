@@ -19,7 +19,7 @@ export default function App() {
     <Route path="/pool/49" element={<Fourty9/>}/>
     <Route path="/pool/99" element={<Nine9/>}/>
     <Route path="/pool/duo/answer" element={<Answer/>}/>
-    <Route path="/pool/duo/compete" element={<Compete/>}/>
+    <Route path="/pool/duo/compete/:compete/" element={<Compete/>}/>
   </Routes>
   </BrowserRouter>;
 }
