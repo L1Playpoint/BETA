@@ -10,20 +10,20 @@ export default function App() {
     useMoralis();
 
   React.useEffect(() => {
-    if (isAuthenticated) {
-      console.log(
-        user
-          ? user.get("ethAddress")
-          : JSON.parse(localStorage.getItem("user")).get("ethAddress")
-      );
-
-      if(activeUsers.length === 0){
-        socketRef.current.emit("get active users");
-        socketRef.current.on("return active users", data => console.log(data))
-      }
+    if (JSON.parse(localStorage.getItem("playpoint-wallet-status"))) {
+      authenticate({ signingMessage: "Log in using Moralis" })
+        .then(function (user) {
+          // console.log("logged in user:", user.get("ethAddress"));
+          socketRef.current.emit("join online pool", {
+            username: user.get("ethAddress"),
+          });
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isAuthenticated]);
+  }, []);
 
   const login = async () => {
     await logout();
@@ -31,7 +31,7 @@ export default function App() {
     if (!isAuthenticated) {
       authenticate({ signingMessage: "Log in using Moralis" })
         .then(function (user) {
-          localStorage.setItem("user", JSON.stringify(user));
+          localStorage.setItem("playpoint-wallet-status", true);
           // console.log("logged in user:", user.get("ethAddress"));
           socketRef.current.emit("join online pool", {
             username: user.get("ethAddress"),
@@ -44,7 +44,7 @@ export default function App() {
   };
 
   const logOut = async () => {
-    localStorage.removeItem("user");
+    localStorage.removeItem("playpoint-wallet-status");
     await logout();
     console.log("logged out");
   };
@@ -52,14 +52,14 @@ export default function App() {
   /**
    * @dev chat components
    */
-  
+
   const socketRef = React.useRef();
   const [activeUsers, setActiveUsers] = React.useState([]);
 
   React.useEffect(() => {
     socketRef.current = io("http://localhost:8000");
     socketRef.current.on("newUserUpdate", (data) => {
-      setActiveUsers(data)
+      setActiveUsers(data);
     });
     return () => {
       socketRef.current.on("disconnect");
