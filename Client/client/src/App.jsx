@@ -6,7 +6,7 @@ export default function App() {
   /**
    * @dev web3 authentication
    */
-  const { authenticate, isAuthenticated, isAuthenticating, logout, user } =
+  const { authenticate, isAuthenticated, isAuthenticating, logout } =
     useMoralis();
 
   React.useEffect(() => {
@@ -32,7 +32,6 @@ export default function App() {
       authenticate({ signingMessage: "Log in using Moralis" })
         .then(function (user) {
           localStorage.setItem("playpoint-wallet-status", true);
-          // console.log("logged in user:", user.get("ethAddress"));
           socketRef.current.emit("join online pool", {
             username: user.get("ethAddress"),
           });
@@ -54,6 +53,7 @@ export default function App() {
    */
 
   const socketRef = React.useRef();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const [activeUsers, setActiveUsers] = React.useState([]);
 
   React.useEffect(() => {
