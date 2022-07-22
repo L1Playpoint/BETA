@@ -44,13 +44,15 @@
     .walletAddress {
       background: #dff9fb;
       padding: 8px 14px;
-      border-radius: 5px;
+      border-radius: 10px;
       font-size: 16px;
     }
 
     .MuiButton-root {
-      background: #ff7979;
+      background: #34495e;
       color: #fff;
+      padding: 5px 15px;
+      text-transform: capitalize;
     }
 
     .userDashboard {

@@ -58,11 +58,11 @@ export default function Web3Auth() {
         {isAuthenticated ? (
           <div className="walletAddress">
             {wallet &&
-              wallet?.get("ethAddress").substring(0, 12) +
+              wallet?.get("ethAddress").substring(0, 18) +
                 "..." +
                 wallet
                   ?.get("ethAddress")
-                  .substring(wallet.get("ethAddress").length - 4)}
+                  .substring(wallet.get("ethAddress").length - 7)}
           </div>
         ) : (
           <Button onClick={login} disabled={isAuthenticating}>

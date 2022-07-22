@@ -154,7 +154,7 @@ export default function Showcases() {
                     {index + 1}
                   </TableCell>
                   <TableCell component="th" scope="row">
-                    <div className="matchName">
+                    <Button className="matchName">
                       <span>Chelsea</span>
                       <img
                         src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
@@ -166,7 +166,7 @@ export default function Showcases() {
                         alt=""
                       />
                       <span>Football Club Barcelona</span>
-                    </div>
+                    </Button>
                   </TableCell>
                   <TableCell align="center">{row.calories}</TableCell>
                   <TableCell align="center">{row.fat}</TableCell>
