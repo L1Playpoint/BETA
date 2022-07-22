@@ -1,0 +1,67 @@
+.showcaseFocused__container {
+  margin: 20px 5vw;
+  margin-top: 90px;
+
+  .topbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .MuiButton-root {
+      color: #000;
+      text-transform: capitalize;
+      display: flex;
+      gap: 5px;
+      font-size: 16px;
+      background: #0001;
+      border-radius: 16px;
+      padding: 5px 15px;
+    }
+  }
+
+  .scoreboard {
+    margin: 0 auto;
+    margin-top: 40px;
+    color: #fff;
+    background: linear-gradient(
+        to right,
+        rgba(50, 70, 80, 0.7),
+        rgba(30, 20, 150, 0.7)
+      ),
+      url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+        no-repeat center center;
+    background-size: cover;
+    padding: 30px 60px;
+    border-radius: 16px;
+    font-size: 22px;
+    width: 70vw;
+    box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
+      0 16px 32px -4px rgb(145 158 171 / 24%);
+
+    .competitor {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      gap: 70px;
+
+      span {
+        font-size: 54px;
+        font-weight: 600;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        font-weight: 600;
+      }
+
+      img {
+        width: 120px;
+        object-fit: contain;
+      }
+    }
+  }
+}
