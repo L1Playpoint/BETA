@@ -1,0 +1,82 @@
+.liveMatchCard__container {
+  -webkit-box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.24), 0 16px 32px -4px rgba(145, 158, 171, 0.24);
+          box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.24), 0 16px 32px -4px rgba(145, 158, 171, 0.24);
+  border-radius: 16px;
+  background: #fff;
+  padding: 20px;
+  min-width: 20vw;
+  position: relative;
+}
+.liveMatchCard__container .absoluteLiveBanner {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #eb4d4b;
+  padding: 2px 15px;
+  border-radius: 10px;
+  color: #fff;
+}
+.liveMatchCard__container .competitors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5px;
+}
+.liveMatchCard__container .competitors span {
+  font-weight: 600;
+  font-size: 24px;
+}
+.liveMatchCard__container .competitors img {
+  width: 75px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.liveMatchCard__container .gameScoreStatus {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.liveMatchCard__container .gameScoreStatus .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+}
+.liveMatchCard__container .userControls {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.liveMatchCard__container .userControls .MuiButton-root {
+  color: #000;
+  text-transform: capitalize;
+  background: rgba(0, 0, 0, 0.0666666667);
+  padding: 2px 8px;
+}
