@@ -1,0 +1,89 @@
+.showcase__container {
+  margin: 20px 5vw;
+  margin-top: 80px;
+
+  .topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .liveMatches__container {
+    margin-top: 30px;
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      h2 {
+        font-weight: 500;
+        span {
+          color: #0007;
+        }
+      }
+
+      .MuiButton-root {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background: #0001;
+        text-transform: capitalize;
+        color: #000;
+      }
+    }
+
+    .liveMatch__items {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+      gap: 40px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
+  .upcomingMatches__container {
+    margin: 40px 0;
+    
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+
+      h2 {
+        font-weight: 500;
+        span {
+          color: #0007;
+        }
+      }
+    }
+
+    .MuiTableRow-root{
+
+        .matchName{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img{
+                width: 40px;
+                object-fit: contain;
+            }
+        }
+
+        .actions{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            .MuiButton-root{
+                background: rgba(156, 156, 156, 0.067);
+                min-width: 0;
+                text-transform: capitalize;
+                color: #000;
+            }
+        }
+    }
+  }
+}
