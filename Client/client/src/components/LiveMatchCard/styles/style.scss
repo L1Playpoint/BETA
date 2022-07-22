@@ -1,0 +1,64 @@
+.liveMatchCard__container {
+    box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
+      0 16px 32px -4px rgb(145 158 171 / 24%);
+    border-radius: 16px;
+    background: #fff;
+    padding: 20px;
+    min-width: 20vw;
+    position: relative;
+
+    .absoluteLiveBanner{
+      position: absolute;
+      top: -10px;
+      left:50%;
+      transform: translateX(-50%);
+      background: #eb4d4b;
+      padding: 2px 15px;
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    .competitors{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 5px;
+
+      span{
+          font-weight: 600;
+          font-size: 24px;
+      }
+      img{
+          width: 75px;
+          object-fit: contain;
+      }
+    }
+
+    .gameScoreStatus{
+      margin-top: 5px;
+      display: flex;
+      gap: 5px;
+      flex-direction: column;
+
+      .item{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 5px;
+      }
+    }
+
+    .userControls{
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .MuiButton-root{
+          color: #000;
+          text-transform: capitalize;
+          background: #0001;
+          padding: 2px 8px;
+      }
+    }
+  }
