@@ -2,11 +2,13 @@ import React from "react";
 import { useMoralis } from "react-moralis";
 import { Button } from "@mui/material";
 import "./styles/style.css";
+import NavDrawer from "../NavDrawer";
 
 export default function Web3Auth() {
   const isAuthenticatedLocal = JSON.parse(
     localStorage.getItem("playpoint-wallet-status")
   );
+
   const [wallet, setWallet] = React.useState();
   const { authenticate, isAuthenticated, isAuthenticating, logout } =
     useMoralis();
@@ -15,7 +17,6 @@ export default function Web3Auth() {
     if (isAuthenticatedLocal)
       authenticate()
         .then((user) => {
-          console.log(user.get("ethAddress"));
           setWallet(user);
         })
         .catch((error) => {
@@ -25,17 +26,15 @@ export default function Web3Auth() {
   }, []);
 
   const login = async () => {
-    if (!isAuthenticated) {
+    if (!isAuthenticated)
       authenticate()
         .then((user) => {
-          console.log(user.get("ethAddress"));
           localStorage.setItem("playpoint-wallet-status", true);
           setWallet(user);
         })
         .catch((error) => {
           console.log(error);
         });
-    }
   };
 
   /**
@@ -44,13 +43,14 @@ export default function Web3Auth() {
   const logOut = async () => {
     localStorage.removeItem("playpoint-wallet-status");
     await logout();
-    console.log("logged out");
+    console.log("Logged Out");
   };
 
   return (
     <div className="web3auth__container">
       <div className="logo__container">
-        <Button><i className="ri-menu-2-fill"></i></Button>
+        <NavDrawer />
+
         <img src="https://ik.imagekit.io/lexworld/Logo.png" />
         <h3>Playpoint</h3>
       </div>
@@ -76,7 +76,7 @@ export default function Web3Auth() {
           </Button>
         )}
         <Button className="userDashboard">
-        <i className="ri-user-3-line"></i>
+          <i className="ri-user-3-line"></i>
         </Button>
       </div>
     </div>

@@ -66,6 +66,8 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 600;
+            
             img{
                 width: 40px;
                 object-fit: contain;
@@ -78,7 +80,7 @@
             gap: 10px;
 
             .MuiButton-root{
-                background: rgba(156, 156, 156, 0.067);
+                background: rgba(87, 87, 87, 0.067);
                 min-width: 0;
                 text-transform: capitalize;
                 color: #000;

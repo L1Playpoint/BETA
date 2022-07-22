@@ -132,6 +132,7 @@ export default function Showcases() {
           <Table sx={{ minWidth: 650 }} aria-label="customized table">
             <TableHead>
               <TableRow>
+                <StyledTableCell>S.N.</StyledTableCell>
                 <StyledTableCell>Match Name</StyledTableCell>
                 <StyledTableCell align="center">
                   Active Predictions
@@ -144,11 +145,14 @@ export default function Showcases() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
+              {rows.map((row, index) => (
                 <TableRow
                   key={row.name}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
+                  <TableCell align="center" component="th" scope="row">
+                    {index + 1}
+                  </TableCell>
                   <TableCell component="th" scope="row">
                     <div className="matchName">
                       <span>Chelsea</span>

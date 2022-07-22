@@ -4,8 +4,12 @@
     border-radius: 16px;
     background: #fff;
     padding: 20px;
-    min-width: 20vw;
+    min-width: 20.3vw;
     position: relative;
+
+    @media (max-width: 576px){
+      width: 100%;
+    }
 
     .absoluteLiveBanner{
       position: absolute;

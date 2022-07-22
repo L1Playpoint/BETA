@@ -4,8 +4,13 @@
   border-radius: 16px;
   background: #fff;
   padding: 20px;
-  min-width: 20vw;
+  min-width: 20.3vw;
   position: relative;
+}
+@media (max-width: 576px) {
+  .liveMatchCard__container {
+    width: 100%;
+  }
 }
 .liveMatchCard__container .absoluteLiveBanner {
   position: absolute;
