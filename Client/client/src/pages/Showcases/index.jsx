@@ -1,14 +1,23 @@
 import React from "react";
-import "./styles/style.css";
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import Link from "@mui/material/Link";
+
+/**
+ * @package for date time picker
+ */
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { AdapterMoment } from "@mui/x-date-pickers/AdapterMoment";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import TextField from "@mui/material/TextField";
 import LiveMatchCard from "../../components/LiveMatchCard";
 import { Button } from "@mui/material";
+
+/**
+ * @mocks for live matches
+ */
+import LiveMatches from "../../mocks/LiveMatches.json";
+import UpcomingMatches from "../../mocks/Showcases.json";
 
 /**
  * @packages Components for table => upcoming matches
@@ -22,6 +31,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 
+import "./styles/style.css";
+
 export default function Showcases() {
   const [value, setValue] = React.useState(new Date());
 
@@ -32,19 +43,6 @@ export default function Showcases() {
   const handleChange = (newValue) => {
     setValue(newValue);
   };
-
-  // setup for upcoming match table
-  function createData(name, calories, fat, carbs, protein) {
-    return { name, calories, fat, carbs, protein };
-  }
-
-  const rows = [
-    createData("Frozen yoghurt", 159, 6.0, 24, 4.0),
-    createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-    createData("Eclair", 262, 16.0, 24, 6.0),
-    createData("Cupcake", 305, 3.7, 67, 4.3),
-    createData("Gingerbread", 356, 16.0, 49, 3.9),
-  ];
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
@@ -104,10 +102,9 @@ export default function Showcases() {
 
         {/* no more than 4 live matches here */}
         <div className="liveMatch__items">
-          <LiveMatchCard />
-          <LiveMatchCard />
-          <LiveMatchCard />
-          <LiveMatchCard />
+          {LiveMatches.map((match, index) => (
+            <LiveMatchCard match={match} key={index} />
+          ))}
         </div>
       </div>
 
@@ -120,7 +117,8 @@ export default function Showcases() {
           <LocalizationProvider dateAdapter={AdapterMoment}>
             <DesktopDatePicker
               label="Showcase By Date"
-              inputFormat="MM/dd/yyyy"
+              inputFormat="MMM/dd/yyyy"
+              disableMaskedInput
               value={value}
               onChange={handleChange}
               renderInput={(params) => <TextField {...params} />}
@@ -133,7 +131,7 @@ export default function Showcases() {
             <TableHead>
               <TableRow>
                 <StyledTableCell>S.N.</StyledTableCell>
-                <StyledTableCell>Match Name</StyledTableCell>
+                <StyledTableCell align="center">Match Name</StyledTableCell>
                 <StyledTableCell align="center">
                   Active Predictions
                 </StyledTableCell>
@@ -145,38 +143,44 @@ export default function Showcases() {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row, index) => (
+              {UpcomingMatches.map((match, index) => (
                 <TableRow
-                  key={row.name}
+                  key={index}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                 >
                   <TableCell align="center" component="th" scope="row">
                     {index + 1}
                   </TableCell>
-                  <TableCell component="th" scope="row">
+                  <TableCell component="th" scope="row" align="center">
                     <Button className="matchName">
-                      <span>Chelsea</span>
+                      <span>{match.challengers.home.challengerName}</span>
                       <img
-                        src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
+                        src={match.challengers.home.logo}
                         alt=""
                         loading="lazy"
                       />
                       <span>vs</span>
                       <img
-                        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"
+                        src={match.challengers.away.logo}
                         alt=""
                         loading="lazy"
                       />
-                      <span>Football Club Barcelona</span>
+                      <span>{match.challengers.away.challengerName}</span>
                     </Button>
                   </TableCell>
-                  <TableCell align="center">{row.calories}</TableCell>
-                  <TableCell align="center">{row.fat}</TableCell>
-                  <TableCell align="center">22 July, 2022, 5AM GST</TableCell>
+                  <TableCell align="center">{match.activePredictions}</TableCell>
+                  <TableCell align="center">{match.totalVolume}</TableCell>
+                  <TableCell align="center">{match.matchTime}</TableCell>
                   <TableCell align="center" className="actions">
-                    <Button>Predict Now</Button>
-                    <Button>Leaderboards</Button>
-                    <Button>Join Chat</Button>
+                    <Button>
+                      <i className="ri-quill-pen-line"></i> Predict Now
+                    </Button>
+                    <Button>
+                      <i className="ri-bubble-chart-line"></i> Leaderboards
+                    </Button>
+                    <Button>
+                      <i className="ri-chat-poll-line"></i> Join Chat
+                    </Button>
                   </TableCell>
                 </TableRow>
               ))}
