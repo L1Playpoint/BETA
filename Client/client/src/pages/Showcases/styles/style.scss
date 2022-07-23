@@ -35,7 +35,7 @@
 
     .liveMatch__items {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       margin: 20px 0;
       gap: 40px;
       margin-top: 30px;
@@ -62,17 +62,20 @@
 
     .MuiTableRow-root{
         .matchName{
+          margin: 0 auto;
             display: flex;
             align-items: center;
             gap: 10px;
             font-weight: 600;
             text-transform: capitalize;
             min-width: 0;
-            padding: 3px;
+            padding: 3px 15px;
             color: #000;
+            justify-content: space-between;
             
             img{
                 width: 40px;
+                height: 40px;
                 object-fit: contain;
             }
         }
@@ -81,12 +84,18 @@
             display: flex;
             align-items: center;
             gap: 10px;
+            flex-wrap: wrap;
 
             .MuiButton-root{
                 background: rgba(87, 87, 87, 0.067);
                 min-width: 0;
                 text-transform: capitalize;
                 color: #000;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                height: 46px;
             }
         }
     }

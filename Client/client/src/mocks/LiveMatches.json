@@ -1,0 +1,70 @@
+[
+    {
+        "id": "23543",
+        "seasonName": "La Liga",
+        "chatRoom": "laliga-23543",
+        "challengers": {
+            "home": {
+                "challengerName": "Chelsea",
+                "score": 1,
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
+            },
+            "away": {
+                "challengerName": "FCB",
+                "score": 3,
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"
+            }
+        }
+    },
+    {
+        "id": "23544",
+        "seasonName": "Bundesliga",
+        "chatRoom": "bundesliga-23544",
+        "challengers": {
+            "home": {
+                "challengerName": "MAN City",
+                "score": 0,
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png"
+            },
+            "away": {
+                "challengerName": "RM",
+                "score": 3,
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Real_Madrid_CF.svg/1200px-Real_Madrid_CF.svg.png"
+            }
+        }
+    },
+    {
+        "id": "23546",
+        "seasonName": "World Cup",
+        "chatRoom": "worldcup-23546",
+        "challengers": {
+            "home": {
+                "challengerName": "Brazil",
+                "score": 2,
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/1200px-Flag_of_Brazil.svg.png"
+            },
+            "away": {
+                "challengerName": "Argentina",
+                "score": 2,
+                "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/1200px-Flag_of_Argentina.svg.png"
+            }
+        }
+    },
+    {
+        "id": "23540",
+        "seasonName": "Premier League",
+        "chatRoom": "premierleague-23540",
+        "challengers": {
+            "home": {
+                "challengerName": "New Castle",
+                "score": 1,
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/1200px-Newcastle_United_Logo.svg.png"
+            },
+            "away": {
+                "challengerName": "Wolves",
+                "score": 0,
+                "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Wolverhampton_Wanderers.svg/1200px-Wolverhampton_Wanderers.svg.png"
+            }
+        }
+    }
+]

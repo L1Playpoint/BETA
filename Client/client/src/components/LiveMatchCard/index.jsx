@@ -4,19 +4,21 @@ import {Button} from '@mui/material'
 import Typography from "@mui/material/Typography";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 
-export default function LiveMatchCard() {
+export default function LiveMatchCard({match}) {
+  const {seasonName, challengers} = match;
+
   return (
     <div className="liveMatchCard__container">
       <div className="absoluteLiveBanner">Live</div>
       <div className="competitors">
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
+          src={challengers.home.logo}
           alt=""
           loading="lazy"
         />
         <span>vs</span>
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"
+          src={challengers.away.logo}
           alt=""
           loading="lazy"
         />
@@ -25,24 +27,24 @@ export default function LiveMatchCard() {
       <span className="sportCategory">
         <Breadcrumbs aria-label="breadcrumb">
           <Typography color="#0006">Football</Typography>
-          <Typography color="text.primary">La Liga</Typography>
+          <Typography color="text.primary">{seasonName}</Typography>
         </Breadcrumbs>
       </span>
 
       <div className="gameScoreStatus">
         <div className="item">
-          <h3>Chelsea</h3>
-          <h3>1</h3>
+          <h4>{challengers.home.challengerName}</h4>
+          <h3>{challengers.home.score}</h3>
         </div>
         <div className="item">
-          <h3>FCB</h3>
-          <h3>3</h3>
+          <h4>{challengers.away.challengerName}</h4>
+          <h3>{challengers.away.score}</h3>
         </div>
       </div>
 
       <div className="userControls">
-        <Button>Leaderboards</Button>
-        <Button>Join Chat Room</Button>
+        <Button><i className="ri-bubble-chart-line"></i> Leaderboard</Button>
+        <Button><i className="ri-chat-poll-line"></i> Chat Room</Button>
       </div>
     </div>
   );

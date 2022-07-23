@@ -34,6 +34,7 @@
       }
       img{
           width: 75px;
+          height: 75px;
           object-fit: contain;
       }
     }
@@ -56,13 +57,16 @@
       margin-top: 15px;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
 
       .MuiButton-root{
           color: #000;
           text-transform: capitalize;
           background: #0001;
           padding: 2px 8px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
       }
     }
   }
