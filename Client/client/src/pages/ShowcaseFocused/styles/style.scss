@@ -20,47 +20,154 @@
     }
   }
 
-  .scoreboard {
-    margin: 0 auto;
+  .main {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
     margin-top: 40px;
-    color: #fff;
-    background: linear-gradient(
-        to right,
-        rgba(50, 70, 80, 0.7),
-        rgba(30, 20, 150, 0.7)
-      ),
-      url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
-        no-repeat center center;
-    background-size: cover;
-    padding: 30px 60px;
-    border-radius: 16px;
-    font-size: 22px;
-    width: 70vw;
-    box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
-      0 16px 32px -4px rgb(145 158 171 / 24%);
 
-    .competitor {
-      justify-content: center;
-      display: flex;
-      align-items: center;
-      gap: 70px;
+    .onlineUsers {
+      border-right: 1px solid #0001;
+      padding-right: 30px;
+      height: 75vh;
+      margin-bottom: 10px;
 
-      span {
-        font-size: 54px;
-        font-weight: 600;
+      h2 {
+        margin-bottom: 15px;
       }
 
-      div {
+      .searchUser{
+        background: #0001;
         display: flex;
         align-items: center;
-        flex-direction: column;
-        gap: 10px;
-        font-weight: 600;
+        gap: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+
+        input{
+          flex: 1;
+          background: transparent;
+          border: none;
+          font-size: 16px;
+
+          &:focus{
+            outline: none;
+            border: none;
+          }
+        }
       }
 
-      img {
-        width: 120px;
-        object-fit: contain;
+.activeUsers{
+  border-top: 1px solid #0001;
+  padding: 10px 0;
+}
+      .user {
+        display: flex;
+        width: 15vw;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        padding: 8px 10px;
+        margin-bottom: 5px;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          background: #0001;
+          border-radius: 10px;
+        }
+
+        .userDetails {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+
+          p {
+            padding: 10px 0;
+          }
+
+          .greenDot {
+            width: 15px;
+            height: 15px;
+            background-color: #3aa45d;
+            border-radius: 50%;
+            position: absolute;
+            left: 25px;
+            border: 2px solid #fff;
+            bottom: 2px;
+            z-index: 1;
+          }
+
+          .image {
+            position: relative;
+
+            img {
+              height: 35px;
+              width: 35px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        .chatBtn {
+          display: none;
+          background: #0001;
+          color: #000;
+          font-size: 16px;
+          min-width: 0;
+          padding: 3px 10px;
+          border-radius: 50%;
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:hover {
+          .chatBtn {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .scoreboard {
+      color: #fff;
+      background: linear-gradient(
+          to right,
+          rgba(50, 70, 80, 0.7),
+          rgba(30, 20, 150, 0.7)
+        ),
+        url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+          no-repeat center center;
+      background-size: cover;
+      padding: 30px 60px;
+      border-radius: 16px;
+      font-size: 22px;
+      flex: 1;
+      box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
+        0 16px 32px -4px rgb(145 158 171 / 24%);
+
+      .competitor {
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        gap: 70px;
+
+        span {
+          font-size: 54px;
+          font-weight: 600;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 10px;
+          font-weight: 600;
+        }
+
+        img {
+          width: 120px;
+          object-fit: contain;
+        }
       }
     }
   }
