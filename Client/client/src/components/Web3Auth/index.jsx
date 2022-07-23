@@ -51,7 +51,7 @@ export default function Web3Auth() {
       <div className="logo__container">
         <NavDrawer />
 
-        <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
+        <img src="https://ik.imagekit.io/lexworld/Logo.png" loading="lazy" alt="" />
         <h3>Playpoint</h3>
       </div>
       <div className="web3auth__authController">

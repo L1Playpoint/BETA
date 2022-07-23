@@ -3,16 +3,14 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import { MoralisProvider } from "react-moralis";
-import 'remixicon/fonts/remixicon.css'
+import "remixicon/fonts/remixicon.css";
+import { envData } from "./utils/envData";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <MoralisProvider
-      serverUrl={process.env.REACT_APP_MORALIS_SERVER_URL}
-      appId={process.env.REACT_APP_MORALIS_APP_ID}
-    >
+    <MoralisProvider appId={envData.appId} serverUrl={envData.serverUrl}>
       <App />
     </MoralisProvider>
   </React.StrictMode>

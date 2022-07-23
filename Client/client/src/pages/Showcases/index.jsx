@@ -159,11 +159,13 @@ export default function Showcases() {
                       <img
                         src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/1200px-Chelsea_FC.svg.png"
                         alt=""
+                        loading="lazy"
                       />
                       <span>vs</span>
                       <img
                         src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"
                         alt=""
+                        loading="lazy"
                       />
                       <span>Football Club Barcelona</span>
                     </Button>
