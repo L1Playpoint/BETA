@@ -3,7 +3,7 @@ import { useMoralis } from "react-moralis";
 import { Button } from "@mui/material";
 import "./styles/style.css";
 import NavDrawer from "../NavDrawer";
-
+import { useNavigate } from "react-router-dom";
 export default function Web3Auth() {
   const isAuthenticatedLocal = JSON.parse(
     localStorage.getItem("playpoint-wallet-status")
@@ -12,6 +12,8 @@ export default function Web3Auth() {
   const [wallet, setWallet] = React.useState();
   const { authenticate, isAuthenticated, isAuthenticating, logout } =
     useMoralis();
+
+    const navigate = useNavigate()
 
   React.useEffect(() => {
     if (isAuthenticatedLocal)
@@ -52,7 +54,7 @@ export default function Web3Auth() {
         <NavDrawer />
 
         <img src="https://ik.imagekit.io/lexworld/Logo.png" loading="lazy" alt="" />
-        <h3>Playpoint</h3>
+        <h3 onClick={() => navigate("/")} style= {{cursor:"pointer"}}>Playpoint</h3>
       </div>
       <div className="web3auth__authController">
         {isAuthenticated ? (
