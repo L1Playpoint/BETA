@@ -32,9 +32,11 @@ import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
 
 import "./styles/style.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Showcases() {
   const [value, setValue] = React.useState(new Date());
+  let navigate = useNavigate();
 
   function handleClick(event) {
     event.preventDefault();
@@ -152,23 +154,25 @@ export default function Showcases() {
                     {index + 1}
                   </TableCell>
                   <TableCell component="th" scope="row" align="center">
-                    <Button className="matchName">
-                      <span>{match.challengers.home.challengerName}</span>
-                      <img
-                        src={match.challengers.home.logo}
-                        alt=""
-                        loading="lazy"
-                      />
-                      <span>vs</span>
-                      <img
-                        src={match.challengers.away.logo}
-                        alt=""
-                        loading="lazy"
-                      />
-                      <span>{match.challengers.away.challengerName}</span>
-                    </Button>
+                      <Button className="matchName" onClick={() => navigate(`/showcase/${match.id}`, { replace: true })}>
+                        <span>{match.challengers.home.challengerName}</span>
+                        <img
+                          src={match.challengers.home.logo}
+                          alt=""
+                          loading="lazy"
+                        />
+                        <span>vs</span>
+                        <img
+                          src={match.challengers.away.logo}
+                          alt=""
+                          loading="lazy"
+                        />
+                        <span>{match.challengers.away.challengerName}</span>
+                      </Button>
                   </TableCell>
-                  <TableCell align="center">{match.activePredictions}</TableCell>
+                  <TableCell align="center">
+                    {match.activePredictions}
+                  </TableCell>
                   <TableCell align="center">{match.totalVolume}</TableCell>
                   <TableCell align="center">{match.matchTime}</TableCell>
                   <TableCell align="center" className="actions">

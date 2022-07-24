@@ -1,5 +1,5 @@
 .showcaseFocused__container {
-  margin: 20px 5vw;
+  margin: 20px 2vw;
   margin-top: 90px;
 }
 .showcaseFocused__container .topbar {
@@ -29,9 +29,184 @@
   border-radius: 16px;
   padding: 5px 15px;
 }
-.showcaseFocused__container .scoreboard {
-  margin: 0 auto;
+.showcaseFocused__container .main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 30px;
   margin-top: 40px;
+}
+.showcaseFocused__container .main .onlineUsers {
+  border-right: 1px solid rgba(0, 0, 0, 0.0666666667);
+  padding-right: 25px;
+  height: 74vh;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 21vw;
+}
+.showcaseFocused__container .main .onlineUsers .top .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+.showcaseFocused__container .main .onlineUsers .top .title p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.showcaseFocused__container .main .onlineUsers .top .searchUser {
+  background: rgba(125, 125, 125, 0.067);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.showcaseFocused__container .main .onlineUsers .top .searchUser input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+}
+.showcaseFocused__container .main .onlineUsers .top .searchUser input:focus {
+  outline: none;
+  border: none;
+}
+.showcaseFocused__container .main .onlineUsers .top .activeUsers {
+  border-top: 1px solid rgba(0, 0, 0, 0.0666666667);
+  padding: 10px 0;
+}
+.showcaseFocused__container .main .onlineUsers .top .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+}
+.showcaseFocused__container .main .onlineUsers .top .user:hover {
+  background: rgba(146, 146, 146, 0.067);
+  border-radius: 10px;
+}
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails p {
+  padding: 10px 0;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails .greenDot {
+  width: 15px;
+  height: 15px;
+  background-color: #2ed573;
+  border-radius: 50%;
+  position: absolute;
+  left: 25px;
+  border: 2px solid #fff;
+  bottom: 2px;
+  z-index: 1;
+}
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails .image {
+  position: relative;
+}
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails .image img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.showcaseFocused__container .main .onlineUsers .top .user .chatBtn {
+  background: #e8f0ff;
+  color: #000;
+  font-size: 16px;
+  min-width: 0;
+  padding: 3px 8px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.showcaseFocused__container .main .onlineUsers .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+.showcaseFocused__container .main .onlineUsers .bottom .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.showcaseFocused__container .main .onlineUsers .bottom .info img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.showcaseFocused__container .main .onlineUsers .bottom .MuiButton-root {
+  min-width: 0;
+  color: #000;
+  background: rgba(0, 0, 0, 0.0666666667);
+  padding: 3px 8px;
+  border-radius: 50%;
+}
+.showcaseFocused__container .main .scoreboard {
   color: #fff;
   background: -webkit-gradient(linear, left top, right top, from(rgba(50, 70, 80, 0.7)), to(rgba(30, 20, 150, 0.7))), url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") no-repeat center center;
   background: linear-gradient(to right, rgba(50, 70, 80, 0.7), rgba(30, 20, 150, 0.7)), url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") no-repeat center center;
@@ -39,11 +214,13 @@
   padding: 30px 60px;
   border-radius: 16px;
   font-size: 22px;
-  width: 70vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   -webkit-box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.24), 0 16px 32px -4px rgba(145, 158, 171, 0.24);
           box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.24), 0 16px 32px -4px rgba(145, 158, 171, 0.24);
 }
-.showcaseFocused__container .scoreboard .competitor {
+.showcaseFocused__container .main .scoreboard .competitor {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -55,11 +232,11 @@
           align-items: center;
   gap: 70px;
 }
-.showcaseFocused__container .scoreboard .competitor span {
+.showcaseFocused__container .main .scoreboard .competitor span {
   font-size: 54px;
   font-weight: 600;
 }
-.showcaseFocused__container .scoreboard .competitor div {
+.showcaseFocused__container .main .scoreboard .competitor div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -73,8 +250,118 @@
   gap: 10px;
   font-weight: 600;
 }
-.showcaseFocused__container .scoreboard .competitor img {
+.showcaseFocused__container .main .scoreboard .competitor img {
   width: 120px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.showcaseFocused__container .main .conversation {
+  width: 21vw;
+  border-left: 1px solid rgba(0, 0, 0, 0.0666666667);
+  height: 74vh;
+}
+.showcaseFocused__container .main .conversation .MuiTab-root {
+  text-transform: capitalize;
+  padding: 5px 10px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root {
+  padding: 5px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .MuiTypography-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 64vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: scroll;
+  padding: 10px 5px;
+  font-size: 14px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .awayMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .awayMessage img {
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .awayMessage .message {
+  background: rgba(0, 0, 0, 0.0666666667);
+  padding: 10px;
+  border-radius: 15px 15px 15px 0;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .homeMessage {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 8px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .homeMessage .message {
+  background: #7bed9f;
+  padding: 10px;
+  border-radius: 15px 15px 0 15px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .homeMessage img {
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageInput {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.0666666667);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 3px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageInput input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageInput input:focus {
+  border: none;
+  outline: none;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageInput .MuiButton-root {
+  background: rgba(0, 0, 0, 0.0666666667);
+  color: #000;
+  font-size: 18px;
+  min-width: 0;
+  padding: 5px 20px;
 }
