@@ -1,5 +1,5 @@
 .showcaseFocused__container {
-  margin: 20px 5vw;
+  margin: 20px 2vw;
   margin-top: 90px;
 
   .topbar {
@@ -28,102 +28,142 @@
 
     .onlineUsers {
       border-right: 1px solid #0001;
-      padding-right: 30px;
-      height: 75vh;
+      padding-right: 25px;
+      height: 74vh;
       margin-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 21vw;
 
-      h2 {
-        margin-bottom: 15px;
-      }
-
-      .searchUser{
-        background: #0001;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        padding: 10px 15px;
-        border-radius: 5px;
-        margin-bottom: 20px;
-
-        input{
-          flex: 1;
-          background: transparent;
-          border: none;
-          font-size: 16px;
-
-          &:focus{
-            outline: none;
-            border: none;
-          }
-        }
-      }
-
-.activeUsers{
-  border-top: 1px solid #0001;
-  padding: 10px 0;
-}
-      .user {
-        display: flex;
-        width: 15vw;
-        align-items: center;
-        justify-content: space-between;
-        cursor: pointer;
-        padding: 8px 10px;
-        margin-bottom: 5px;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          background: #0001;
-          border-radius: 10px;
-        }
-
-        .userDetails {
+      .top {
+        .title {
           display: flex;
           align-items: center;
-          gap: 15px;
+          justify-content: space-between;
+          margin-bottom: 20px;
 
           p {
-            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 5px;
           }
+        }
 
-          .greenDot {
-            width: 15px;
-            height: 15px;
-            background-color: #3aa45d;
-            border-radius: 50%;
-            position: absolute;
-            left: 25px;
-            border: 2px solid #fff;
-            bottom: 2px;
-            z-index: 1;
-          }
+        .searchUser {
+          background: rgba(125, 125, 125, 0.067);
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          padding: 10px 15px;
+          border-radius: 5px;
+          margin-bottom: 20px;
 
-          .image {
-            position: relative;
+          input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            font-size: 16px;
 
-            img {
-              height: 35px;
-              width: 35px;
-              border-radius: 50%;
-              object-fit: cover;
+            &:focus {
+              outline: none;
+              border: none;
             }
           }
         }
 
-        .chatBtn {
-          display: none;
-          background: #0001;
-          color: #000;
-          font-size: 16px;
-          min-width: 0;
-          padding: 3px 10px;
-          border-radius: 50%;
-          transition: all 0.3s ease-in-out;
+        .activeUsers {
+          border-top: 1px solid #0001;
+          padding: 10px 0;
         }
 
-        &:hover {
-          .chatBtn {
-            display: block;
+        .user {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          cursor: pointer;
+          padding: 8px 10px;
+          margin-bottom: 5px;
+
+          &:hover {
+            background: rgba(146, 146, 146, 0.067);
+            border-radius: 10px;
           }
+
+          .userDetails {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            p {
+              padding: 10px 0;
+              font-weight: 600;
+              color: #0009;
+            }
+
+            .greenDot {
+              width: 15px;
+              height: 15px;
+              background-color: #2ed573;
+              border-radius: 50%;
+              position: absolute;
+              left: 25px;
+              border: 2px solid #fff;
+              bottom: 2px;
+              z-index: 1;
+            }
+
+            .image {
+              position: relative;
+
+              img {
+                height: 35px;
+                width: 35px;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+            }
+          }
+
+          .chatBtn {
+            background: #e8f0ff;
+            color: #000;
+            font-size: 16px;
+            min-width: 0;
+            padding: 3px 8px;
+            border-radius: 50%;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        justify-content: space-between;
+        color: #0009;
+        font-weight: 600;
+
+        .info {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+
+          img {
+            width: 35px;
+            height: 35px;
+            object-fit: contain;
+          }
+        }
+
+        .MuiButton-root {
+          min-width: 0;
+          color: #000;
+          background: #0001;
+          padding: 3px 8px;
+          border-radius: 50%;
         }
       }
     }
@@ -167,6 +207,104 @@
         img {
           width: 120px;
           object-fit: contain;
+        }
+      }
+    }
+
+    .conversation {
+      width: 21vw;
+      border-left: 1px solid #0001;
+      height: 74vh;
+
+      .MuiTab-root {
+        text-transform: capitalize;
+        padding: 5px 10px;
+      }
+
+      .chatBox {
+        .MuiBox-root {
+          padding: 5px;
+
+          .MuiTypography-root {
+            display: flex;
+            height: 64vh;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+
+          .messageContainer {
+            flex: 1;
+            overflow-y: scroll;
+            padding: 10px 5px;
+            font-size: 14px;
+
+            .awayMessage {
+              display: flex;
+              align-items: flex-end;
+              gap: 8px;
+              margin-bottom: 10px;
+
+              img {
+                width: 30px;
+                object-fit: cover;
+                height: 30px;
+              }
+
+              .message {
+                background: #0001;
+                padding: 10px;
+                border-radius: 15px 15px 15px 0;
+              }
+            }
+
+            .homeMessage {
+              margin-bottom: 10px;
+              display: flex;
+              justify-content: flex-end;
+              align-items: flex-end;
+              gap: 8px;
+
+              .message {
+                background: #7bed9f;
+                padding: 10px;
+                border-radius: 15px 15px 0 15px;
+              }
+
+              img {
+                width: 30px;
+                object-fit: cover;
+                height: 30px;
+              }
+            }
+          }
+
+          .messageInput {
+            border-top: 0.5px solid #0001;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 3px;
+
+            input {
+              flex: 1;
+              border: none;
+              background: transparent;
+              font-size: 16px;
+
+              &:focus {
+                border: none;
+                outline: none;
+              }
+            }
+
+            .MuiButton-root {
+              background: #0001;
+              color: #000;
+              font-size: 18px;
+              min-width: 0;
+              padding: 5px 20px;
+            }
+          }
         }
       }
     }

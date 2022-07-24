@@ -1,5 +1,5 @@
 .showcaseFocused__container {
-  margin: 20px 5vw;
+  margin: 20px 2vw;
   margin-top: 90px;
 }
 .showcaseFocused__container .topbar {
@@ -41,15 +41,44 @@
 }
 .showcaseFocused__container .main .onlineUsers {
   border-right: 1px solid rgba(0, 0, 0, 0.0666666667);
-  padding-right: 30px;
-  height: 75vh;
+  padding-right: 25px;
+  height: 74vh;
   margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 21vw;
 }
-.showcaseFocused__container .main .onlineUsers h2 {
-  margin-bottom: 15px;
+.showcaseFocused__container .main .onlineUsers .top .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
 }
-.showcaseFocused__container .main .onlineUsers .searchUser {
-  background: rgba(0, 0, 0, 0.0666666667);
+.showcaseFocused__container .main .onlineUsers .top .title p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.showcaseFocused__container .main .onlineUsers .top .searchUser {
+  background: rgba(125, 125, 125, 0.067);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -61,7 +90,7 @@
   border-radius: 5px;
   margin-bottom: 20px;
 }
-.showcaseFocused__container .main .onlineUsers .searchUser input {
+.showcaseFocused__container .main .onlineUsers .top .searchUser input {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -69,19 +98,19 @@
   border: none;
   font-size: 16px;
 }
-.showcaseFocused__container .main .onlineUsers .searchUser input:focus {
+.showcaseFocused__container .main .onlineUsers .top .searchUser input:focus {
   outline: none;
   border: none;
 }
-.showcaseFocused__container .main .onlineUsers .activeUsers {
+.showcaseFocused__container .main .onlineUsers .top .activeUsers {
   border-top: 1px solid rgba(0, 0, 0, 0.0666666667);
   padding: 10px 0;
 }
-.showcaseFocused__container .main .onlineUsers .user {
+.showcaseFocused__container .main .onlineUsers .top .user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 15vw;
+  width: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -91,14 +120,12 @@
   cursor: pointer;
   padding: 8px 10px;
   margin-bottom: 5px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
-.showcaseFocused__container .main .onlineUsers .user:hover {
-  background: rgba(0, 0, 0, 0.0666666667);
+.showcaseFocused__container .main .onlineUsers .top .user:hover {
+  background: rgba(146, 146, 146, 0.067);
   border-radius: 10px;
 }
-.showcaseFocused__container .main .onlineUsers .user .userDetails {
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,13 +134,15 @@
           align-items: center;
   gap: 15px;
 }
-.showcaseFocused__container .main .onlineUsers .user .userDetails p {
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails p {
   padding: 10px 0;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
 }
-.showcaseFocused__container .main .onlineUsers .user .userDetails .greenDot {
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails .greenDot {
   width: 15px;
   height: 15px;
-  background-color: #3aa45d;
+  background-color: #2ed573;
   border-radius: 50%;
   position: absolute;
   left: 25px;
@@ -121,29 +150,61 @@
   bottom: 2px;
   z-index: 1;
 }
-.showcaseFocused__container .main .onlineUsers .user .userDetails .image {
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails .image {
   position: relative;
 }
-.showcaseFocused__container .main .onlineUsers .user .userDetails .image img {
+.showcaseFocused__container .main .onlineUsers .top .user .userDetails .image img {
   height: 35px;
   width: 35px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.showcaseFocused__container .main .onlineUsers .user .chatBtn {
-  display: none;
-  background: rgba(0, 0, 0, 0.0666666667);
+.showcaseFocused__container .main .onlineUsers .top .user .chatBtn {
+  background: #e8f0ff;
   color: #000;
   font-size: 16px;
   min-width: 0;
-  padding: 3px 10px;
+  padding: 3px 8px;
   border-radius: 50%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.showcaseFocused__container .main .onlineUsers .user:hover .chatBtn {
-  display: block;
+.showcaseFocused__container .main .onlineUsers .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+}
+.showcaseFocused__container .main .onlineUsers .bottom .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.showcaseFocused__container .main .onlineUsers .bottom .info img {
+  width: 35px;
+  height: 35px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.showcaseFocused__container .main .onlineUsers .bottom .MuiButton-root {
+  min-width: 0;
+  color: #000;
+  background: rgba(0, 0, 0, 0.0666666667);
+  padding: 3px 8px;
+  border-radius: 50%;
 }
 .showcaseFocused__container .main .scoreboard {
   color: #fff;
@@ -193,4 +254,114 @@
   width: 120px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+.showcaseFocused__container .main .conversation {
+  width: 21vw;
+  border-left: 1px solid rgba(0, 0, 0, 0.0666666667);
+  height: 74vh;
+}
+.showcaseFocused__container .main .conversation .MuiTab-root {
+  text-transform: capitalize;
+  padding: 5px 10px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root {
+  padding: 5px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .MuiTypography-root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 64vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: scroll;
+  padding: 10px 5px;
+  font-size: 14px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .awayMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .awayMessage img {
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .awayMessage .message {
+  background: rgba(0, 0, 0, 0.0666666667);
+  padding: 10px;
+  border-radius: 15px 15px 15px 0;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .homeMessage {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 8px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .homeMessage .message {
+  background: #7bed9f;
+  padding: 10px;
+  border-radius: 15px 15px 0 15px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageContainer .homeMessage img {
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageInput {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.0666666667);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 3px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageInput input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageInput input:focus {
+  border: none;
+  outline: none;
+}
+.showcaseFocused__container .main .conversation .chatBox .MuiBox-root .messageInput .MuiButton-root {
+  background: rgba(0, 0, 0, 0.0666666667);
+  color: #000;
+  font-size: 18px;
+  min-width: 0;
+  padding: 5px 20px;
 }
