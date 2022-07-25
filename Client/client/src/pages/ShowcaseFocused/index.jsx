@@ -53,7 +53,7 @@ export default function ShowcaseFocused() {
   return (
     <div className="showcaseFocused__container">
       <div className="topbar">
-        <div>
+        {/* <div>
           <h1>
             Showcase: <span style={{ color: "#ee5253" }}>{showcase_id}</span>
           </h1>
@@ -70,7 +70,7 @@ export default function ShowcaseFocused() {
             </Link>
             <Typography color="text.primary">22 July, 2022</Typography>
           </Breadcrumbs>
-        </div>
+        </div> */}
 
         {/* <Button>
           <i className="ri-message-3-line"></i> Join Conversation
@@ -80,6 +80,26 @@ export default function ShowcaseFocused() {
       <div className="main">
         <div className="onlineUsers">
           <div className="top">
+            <div>
+              <h2>
+                Showcase:{" "}
+                <span style={{ color: "#ee5253" }}>{showcase_id}</span>
+              </h2>
+              <Breadcrumbs aria-label="breadcrumb">
+                <Link underline="hover" color="inherit" href="/">
+                  Playpoint
+                </Link>
+                <Link
+                  underline="hover"
+                  color="inherit"
+                  href="/material-ui/getting-started/installation/"
+                >
+                  Showcases
+                </Link>
+                <Typography color="text.primary">22 July, 2022</Typography>
+              </Breadcrumbs>
+            </div>
+
             <div className="title">
               <h3>Online Users</h3>
               <p>
@@ -183,7 +203,7 @@ export default function ShowcaseFocused() {
               />
               <div>Chelsea</div>
             </div>
-            <span>0 - 1</span>
+            <span>VS</span>
             <div>
               <img
                 src="https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/1200px-FC_Barcelona_%28crest%29.svg.png"
@@ -193,11 +213,30 @@ export default function ShowcaseFocused() {
               <div>FCB</div>
             </div>
           </div>
-        </div>
-        <div className="conversation">
-          <div className="title">
-            <h3>Live Conversations</h3>
+
+          <div className="pools">
+            <Button>
+              Duo
+            </Button>
+            <Button>
+              Trio
+            </Button>
           </div>
+        </div>
+
+        <div className="conversation">
+          <div className="predictOptions">
+            <h2>Predict:</h2>
+            <Button>
+              <i className="ri-group-line"></i> Duo
+            </Button>
+            <Button>
+              <i className="ri-team-line"></i> Trio
+            </Button>
+          </div>
+          {/* <div className="title">
+            <h3>Live Conversations</h3>
+          </div> */}
 
           <Box sx={{ width: "100%" }}>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
@@ -219,62 +258,66 @@ export default function ShowcaseFocused() {
               </Tabs>
             </Box>
             <TabPanel className="chatBox" value={value} index={0}>
-              <div className="messageContainer">
-                <div className="awayMessage">
+              <span className="messageContainer">
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">How you doin mates!</div>
-                </div>
-                <div className="awayMessage">
+                  <span className="message">How you doin mates!</span>
+                </span>
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">All good! What you think of this game?</div>
-                </div>
-                <div className="homeMessage">
-                  <div className="message">
+                  <span className="message">
+                    All good! What you think of this game?
+                  </span>
+                </span>
+                <span className="homeMessage">
+                  <span className="message">
                     Hello World, I guess this game is real good, wy say guys?
-                  </div>
+                  </span>
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                </div>
+                </span>
 
-                <div className="awayMessage">
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">Hello World!</div>
-                </div>
-              </div>
-              <div className="messageInput">
+                  <span className="message">Hello World!</span>
+                </span>
+              </span>
+              <span className="messageInput">
                 <input type="text" placeholder="Enter Message..." />
                 <Button>
                   <i className="ri-send-plane-fill"></i>
                 </Button>
-              </div>
+              </span>
             </TabPanel>
             <TabPanel className="chatBox" value={value} index={1}>
-            <div className="messageContainer">
-                <div className="awayMessage">
+              <span className="messageContainer">
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">How you doin mates!</div>
-                </div>
-                <div className="awayMessage">
+                  <span className="message">How you doin mates!</span>
+                </span>
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">All good! What you think of this game?</div>
-                </div>
-                <div className="homeMessage">
-                  <div className="message">
+                  <span className="message">
+                    All good! What you think of this game?
+                  </span>
+                </span>
+                <span className="homeMessage">
+                  <span className="message">
                     Hello World, I guess this game is real good, wy say guys?
-                  </div>
+                  </span>
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                </div>
+                </span>
 
-                <div className="awayMessage">
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">Hello World!</div>
-                </div>
-              </div>
-              <div className="messageInput">
+                  <span className="message">Hello World!</span>
+                </span>
+              </span>
+              <span className="messageInput">
                 <input type="text" placeholder="Enter Message..." />
                 <Button>
                   <i className="ri-send-plane-fill"></i>
                 </Button>
-              </div>
+              </span>
             </TabPanel>
           </Box>
         </div>
