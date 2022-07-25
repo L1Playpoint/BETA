@@ -1,5 +1,5 @@
 .showcaseFocused__container {
-  margin: 20px 2vw;
+  margin: 20px 1.5vw;
   margin-top: 90px;
 }
 .showcaseFocused__container .topbar {
@@ -17,7 +17,16 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.showcaseFocused__container .topbar .MuiButton-root {
+.showcaseFocused__container .topbar .predictOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.showcaseFocused__container .topbar .predictOptions .MuiButton-root {
   color: #000;
   text-transform: capitalize;
   display: -webkit-box;
@@ -37,12 +46,11 @@
       -ms-flex-align: start;
           align-items: flex-start;
   gap: 30px;
-  margin-top: 40px;
 }
 .showcaseFocused__container .main .onlineUsers {
   border-right: 1px solid rgba(0, 0, 0, 0.0666666667);
   padding-right: 25px;
-  height: 74vh;
+  height: 86vh;
   margin-bottom: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -67,6 +75,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 20px;
+  margin-top: 22px;
 }
 .showcaseFocused__container .main .onlineUsers .top .title p {
   display: -webkit-box;
@@ -258,7 +267,7 @@
 .showcaseFocused__container .main .conversation {
   width: 21vw;
   border-left: 1px solid rgba(0, 0, 0, 0.0666666667);
-  height: 74vh;
+  height: 86vh;
 }
 .showcaseFocused__container .main .conversation .title {
   margin: 0 20px;
@@ -274,7 +283,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 64vh;
+  height: 71vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -367,4 +376,26 @@
   font-size: 18px;
   min-width: 0;
   padding: 5px 20px;
+}
+.showcaseFocused__container .main .conversation .predictOptions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.showcaseFocused__container .main .conversation .predictOptions .MuiButton-root {
+  color: #000;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  font-size: 15px;
+  background: rgba(0, 0, 0, 0.0666666667);
+  border-radius: 16px;
+  padding: 1px 15px;
 }

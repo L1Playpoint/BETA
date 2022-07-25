@@ -77,7 +77,7 @@ export default function Web3Auth() {
             Disconnect
           </Button>
         )}
-        <Button className="userDashboard">
+        <Button className="userDashboard" onClick={() => navigate("/profile/123")}>
           <i className="ri-user-3-line"></i>
         </Button>
       </div>

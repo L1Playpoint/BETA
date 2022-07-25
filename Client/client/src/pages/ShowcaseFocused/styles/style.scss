@@ -1,5 +1,5 @@
 .showcaseFocused__container {
-  margin: 20px 2vw;
+  margin: 20px 1.5vw;
   margin-top: 90px;
 
   .topbar {
@@ -7,16 +7,21 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-
-    .MuiButton-root {
-      color: #000;
-      text-transform: capitalize;
+    .predictOptions{
       display: flex;
-      gap: 5px;
-      font-size: 16px;
-      background: #0001;
-      border-radius: 16px;
-      padding: 5px 15px;
+      align-items: center;
+      gap: 10px;
+      
+      .MuiButton-root {
+        color: #000;
+        text-transform: capitalize;
+        display: flex;
+        gap: 5px;
+        font-size: 16px;
+        background: #0001;
+        border-radius: 16px;
+        padding: 5px 15px;
+      }
     }
   }
 
@@ -24,24 +29,25 @@
     display: flex;
     align-items: flex-start;
     gap: 30px;
-    margin-top: 40px;
+    // margin-top: 40px;
 
+    
     .onlineUsers {
       border-right: 1px solid #0001;
       padding-right: 25px;
-      height: 74vh;
+      height: 86vh;
       margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       flex-direction: column;
       width: 21vw;
-
       .top {
         .title {
           display: flex;
           align-items: center;
           justify-content: space-between;
           margin-bottom: 20px;
+          margin-top: 22px;
 
           p {
             display: flex;
@@ -214,7 +220,7 @@
     .conversation {
       width: 21vw;
       border-left: 1px solid #0001;
-      height: 74vh;
+      height: 86vh;
 
       .title{
         margin: 0 20px;
@@ -231,7 +237,7 @@
 
           .MuiTypography-root {
             display: flex;
-            height: 64vh;
+            height: 71vh;
             flex-direction: column;
             justify-content: space-between;
           }
@@ -309,6 +315,24 @@
               padding: 5px 20px;
             }
           }
+        }
+      }
+
+      .predictOptions{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        
+        .MuiButton-root {
+          color: #000;
+          text-transform: capitalize;
+          display: flex;
+          gap: 5px;
+          font-size: 15px;
+          background: #0001;
+          border-radius: 16px;
+          padding: 1px 15px;
         }
       }
     }
