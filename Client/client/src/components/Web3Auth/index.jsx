@@ -19,6 +19,7 @@ export default function Web3Auth() {
     if (isAuthenticatedLocal)
       authenticate()
         .then((user) => {
+          console.log(user)
           setWallet(user);
         })
         .catch((error) => {

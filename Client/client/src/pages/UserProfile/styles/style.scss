@@ -1,4 +1,130 @@
-.userProfile__container{
-    margin: 0 5vw;
-    margin-top: 80px;
+.userProfile__container {
+  margin-top: 68px;
+
+  .userCover {
+    background: linear-gradient(
+        to right,
+        rgba(50, 70, 80, 0.7),
+        rgba(30, 20, 150, 0.7)
+      ),
+      url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+        no-repeat center center;
+    height: 180px;
+    border-radius: 0 0 60px 60px;
+    position: relative;
+
+    .userInfo {
+      width: 90vw;
+      position: absolute;
+      left: 5vw;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+
+      .walletInfo {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        gap: 10px;
+
+        .userImage {
+          width: 100px;
+          height: 100px;
+          object-fit: contain;
+        }
+      }
+
+      .gameInfo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        div {
+          background: #0006;
+          color: #fff;
+          text-align: center;
+          padding: 15px 30px;
+          border-radius: 16px;
+
+          h2 {
+            margin-bottom: 10px;
+          }
+
+          &:hover {
+            background: #0009;
+          }
+        }
+      }
+    }
+  }
+
+  .main {
+    margin: 30px 5vw;
+    display: flex;
+    align-items: flex-start;
+
+    .dashboard {
+      width: 15vw;
+      box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
+        0 16px 32px -4px rgb(145 158 171 / 24%);
+      border-radius: 16px;
+      background: #fff;
+      //   padding: 20px 0;
+
+      .MuiButton-root {
+        padding: 12px 20px;
+        text-transform: capitalize;
+        font-size: 16px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        gap: 8px;
+        width: 100%;
+
+        &.active {
+          background: #a29bfe;
+          color: #fff;
+        }
+      }
+    }
+
+    .main__container {
+      flex: 1;
+      padding: 0 20px;
+    }
+
+    .messages {
+      height: 60vh;
+      width: 20vw;
+      box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
+        0 16px 32px -4px rgb(145 158 171 / 24%);
+      border-radius: 16px;
+      background: #fff;
+      padding: 20px;
+
+      .searchUser {
+        background: rgba(125, 125, 125, 0.067);
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+
+        input {
+          flex: 1;
+          background: transparent;
+          border: none;
+          font-size: 16px;
+
+          &:focus {
+            outline: none;
+            border: none;
+          }
+        }
+      }
+    }
+  }
 }

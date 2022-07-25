@@ -7,11 +7,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    .predictOptions{
+    .predictOptions {
       display: flex;
       align-items: center;
       gap: 10px;
-      
+
       .MuiButton-root {
         color: #000;
         text-transform: capitalize;
@@ -31,7 +31,6 @@
     gap: 30px;
     // margin-top: 40px;
 
-    
     .onlineUsers {
       border-right: 1px solid #0001;
       padding-right: 25px;
@@ -175,23 +174,23 @@
     }
 
     .scoreboard {
-      color: #fff;
-      background: linear-gradient(
-          to right,
-          rgba(50, 70, 80, 0.7),
-          rgba(30, 20, 150, 0.7)
-        ),
-        url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
-          no-repeat center center;
-      background-size: cover;
-      padding: 30px 60px;
-      border-radius: 16px;
-      font-size: 22px;
       flex: 1;
-      box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
-        0 16px 32px -4px rgb(145 158 171 / 24%);
 
       .competitor {
+        color: #fff;
+        background: linear-gradient(
+            to right,
+            rgba(50, 70, 80, 0.7),
+            rgba(30, 20, 150, 0.7)
+          ),
+          url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80")
+            no-repeat center center;
+        background-size: cover;
+        padding: 30px 60px;
+        border-radius: 16px;
+        font-size: 22px;
+        box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
+          0 16px 32px -4px rgb(145 158 171 / 24%);
         justify-content: center;
         display: flex;
         align-items: center;
@@ -222,7 +221,7 @@
       border-left: 1px solid #0001;
       height: 86vh;
 
-      .title{
+      .title {
         margin: 0 20px;
       }
 
@@ -318,12 +317,12 @@
         }
       }
 
-      .predictOptions{
+      .predictOptions {
         display: flex;
         align-items: center;
         gap: 10px;
         padding: 10px;
-        
+
         .MuiButton-root {
           color: #000;
           text-transform: capitalize;

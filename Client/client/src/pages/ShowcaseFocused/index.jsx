@@ -213,6 +213,15 @@ export default function ShowcaseFocused() {
               <div>FCB</div>
             </div>
           </div>
+
+          <div className="pools">
+            <Button>
+              Duo
+            </Button>
+            <Button>
+              Trio
+            </Button>
+          </div>
         </div>
 
         <div className="conversation">
@@ -249,66 +258,66 @@ export default function ShowcaseFocused() {
               </Tabs>
             </Box>
             <TabPanel className="chatBox" value={value} index={0}>
-              <div className="messageContainer">
-                <div className="awayMessage">
+              <span className="messageContainer">
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">How you doin mates!</div>
-                </div>
-                <div className="awayMessage">
+                  <span className="message">How you doin mates!</span>
+                </span>
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">
+                  <span className="message">
                     All good! What you think of this game?
-                  </div>
-                </div>
-                <div className="homeMessage">
-                  <div className="message">
+                  </span>
+                </span>
+                <span className="homeMessage">
+                  <span className="message">
                     Hello World, I guess this game is real good, wy say guys?
-                  </div>
+                  </span>
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                </div>
+                </span>
 
-                <div className="awayMessage">
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">Hello World!</div>
-                </div>
-              </div>
-              <div className="messageInput">
+                  <span className="message">Hello World!</span>
+                </span>
+              </span>
+              <span className="messageInput">
                 <input type="text" placeholder="Enter Message..." />
                 <Button>
                   <i className="ri-send-plane-fill"></i>
                 </Button>
-              </div>
+              </span>
             </TabPanel>
             <TabPanel className="chatBox" value={value} index={1}>
-              <div className="messageContainer">
-                <div className="awayMessage">
+              <span className="messageContainer">
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">How you doin mates!</div>
-                </div>
-                <div className="awayMessage">
+                  <span className="message">How you doin mates!</span>
+                </span>
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">
+                  <span className="message">
                     All good! What you think of this game?
-                  </div>
-                </div>
-                <div className="homeMessage">
-                  <div className="message">
+                  </span>
+                </span>
+                <span className="homeMessage">
+                  <span className="message">
                     Hello World, I guess this game is real good, wy say guys?
-                  </div>
+                  </span>
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                </div>
+                </span>
 
-                <div className="awayMessage">
+                <span className="awayMessage">
                   <img src="https://ik.imagekit.io/lexworld/Logo.png" alt="" />
-                  <div className="message">Hello World!</div>
-                </div>
-              </div>
-              <div className="messageInput">
+                  <span className="message">Hello World!</span>
+                </span>
+              </span>
+              <span className="messageInput">
                 <input type="text" placeholder="Enter Message..." />
                 <Button>
                   <i className="ri-send-plane-fill"></i>
                 </Button>
-              </div>
+              </span>
             </TabPanel>
           </Box>
         </div>
