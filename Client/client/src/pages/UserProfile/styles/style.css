@@ -1,1 +1,306 @@
-.userProfile__container{margin-top:68px}.userProfile__container .userCover{background:-webkit-gradient(linear,left top,right top,from(rgba(50,70,80,0.7)),to(rgba(30,20,150,0.7))),url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") no-repeat center center;background:linear-gradient(to right,rgba(50,70,80,0.7),rgba(30,20,150,0.7)),url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") no-repeat center center;height:180px;border-radius:0 0 60px 60px;position:relative}.userProfile__container .userCover .userInfo{width:90vw;position:absolute;left:5vw;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}.userProfile__container .userCover .userInfo .walletInfo{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;color:#fff;gap:10px}.userProfile__container .userCover .userInfo .walletInfo .userImage{width:100px;height:100px;-o-object-fit:contain;object-fit:contain}.userProfile__container .userCover .userInfo .gameInfo{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:20px}.userProfile__container .userCover .userInfo .gameInfo div{background:rgba(0,0,0,0.4);color:#fff;text-align:center;padding:15px 30px;border-radius:16px}.userProfile__container .userCover .userInfo .gameInfo div h2{margin-bottom:10px}.userProfile__container .userCover .userInfo .gameInfo div:hover{background:rgba(0,0,0,0.6)}.userProfile__container .main{margin:30px 5vw;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:start;-ms-flex-align:start;align-items:flex-start}.userProfile__container .main .dashboard{width:15vw;-webkit-box-shadow:0 0 2px 0 rgba(145,158,171,0.24),0 16px 32px -4px rgba(145,158,171,0.24);box-shadow:0 0 2px 0 rgba(145,158,171,0.24),0 16px 32px -4px rgba(145,158,171,0.24);border-radius:16px;background:#fff}.userProfile__container .main .dashboard .MuiButton-root{padding:12px 20px;text-transform:capitalize;font-size:16px;color:#000;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:left;-ms-flex-pack:left;justify-content:left;gap:8px;width:100%}.userProfile__container .main .dashboard .MuiButton-root.active{background:#a29bfe;color:#fff}.userProfile__container .main .main__container{-webkit-box-flex:1;-ms-flex:1;flex:1;padding:0 20px}.userProfile__container .main .messages{height:60vh;width:20vw;-webkit-box-shadow:0 0 2px 0 rgba(145,158,171,0.24),0 16px 32px -4px rgba(145,158,171,0.24);box-shadow:0 0 2px 0 rgba(145,158,171,0.24),0 16px 32px -4px rgba(145,158,171,0.24);border-radius:16px;background:#fff;padding:20px}.userProfile__container .main .messages .searchUser{background:rgba(125,125,125,0.067);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;gap:5px;padding:10px 15px;border-radius:5px;margin-bottom:20px}.userProfile__container .main .messages .searchUser input{-webkit-box-flex:1;-ms-flex:1;flex:1;background:transparent;border:none;font-size:16px}.userProfile__container .main .messages .searchUser input:focus{outline:none;border:none}
+.userProfile__container {
+  margin-top: 68px;
+}
+.userProfile__container .userCover {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(50, 70, 80, 0.7)), to(rgba(30, 20, 150, 0.7))), url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") no-repeat center center;
+  background: linear-gradient(to right, rgba(50, 70, 80, 0.7), rgba(30, 20, 150, 0.7)), url("https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80") no-repeat center center;
+  height: 180px;
+  border-radius: 0 0 60px 60px;
+  position: relative;
+}
+.userProfile__container .userCover .userInfo {
+  width: 90vw;
+  position: absolute;
+  left: 5vw;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.userProfile__container .userCover .userInfo .walletInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  gap: 10px;
+}
+.userProfile__container .userCover .userInfo .walletInfo .userImage {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.userProfile__container .userCover .userInfo .gameInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+.userProfile__container .userCover .userInfo .gameInfo div {
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+  padding: 15px 30px;
+  border-radius: 16px;
+}
+.userProfile__container .userCover .userInfo .gameInfo div h2 {
+  margin-bottom: 10px;
+}
+.userProfile__container .userCover .userInfo .gameInfo div:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+.userProfile__container .main {
+  margin: 30px 5vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.userProfile__container .main .dashboard {
+  width: 15vw;
+  -webkit-box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.24), 0 16px 32px -4px rgba(145, 158, 171, 0.24);
+          box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.24), 0 16px 32px -4px rgba(145, 158, 171, 0.24);
+  border-radius: 16px;
+  background: #fff;
+}
+.userProfile__container .main .dashboard .MuiButton-root {
+  padding: 12px 20px;
+  text-transform: capitalize;
+  font-size: 16px;
+  color: #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  gap: 8px;
+  width: 100%;
+}
+.userProfile__container .main .dashboard .MuiButton-root.active {
+  background: #a29bfe;
+  color: #fff;
+}
+.userProfile__container .main .main__container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 20px;
+}
+.userProfile__container .main .messages {
+  height: 60vh;
+  width: 20vw;
+  -webkit-box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.24), 0 16px 32px -4px rgba(145, 158, 171, 0.24);
+          box-shadow: 0 0 2px 0 rgba(145, 158, 171, 0.24), 0 16px 32px -4px rgba(145, 158, 171, 0.24);
+  border-radius: 16px;
+  background: #fff;
+  padding: 20px;
+}
+.userProfile__container .main .messages .searchUser {
+  background: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.userProfile__container .main .messages .searchUser .searchInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+.userProfile__container .main .messages .searchUser .searchInput input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+}
+.userProfile__container .main .messages .searchUser .searchInput input:focus {
+  outline: none;
+  border: none;
+}
+.userProfile__container .main .messages .searchUser .middle {
+  height: 100%;
+  overflow: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers {
+  border-top: 1px solid rgba(0, 0, 0, 0.0666666667);
+  padding: 10px 0;
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers .user:hover {
+  background: rgba(146, 146, 146, 0.067);
+  border-radius: 10px;
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers .user .userDetails {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers .user .userDetails p {
+  padding: 10px 0;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers .user .userDetails .greenDot {
+  width: 15px;
+  height: 15px;
+  background-color: #2ed573;
+  border-radius: 50%;
+  position: absolute;
+  left: 25px;
+  border: 2px solid #fff;
+  bottom: 2px;
+  z-index: 1;
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers .user .userDetails .image {
+  position: relative;
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers .user .userDetails .image img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.userProfile__container .main .messages .searchUser .middle .activeUsers .user .chatBtn {
+  background: #e8f0ff;
+  color: #000;
+  font-size: 16px;
+  min-width: 0;
+  padding: 3px 8px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageContainer {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  overflow-y: scroll;
+  padding: 10px 5px;
+  font-size: 14px;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageContainer .awayMessage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageContainer .awayMessage img {
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30px;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageContainer .awayMessage .message {
+  background: rgba(0, 0, 0, 0.0666666667);
+  padding: 10px;
+  border-radius: 15px 15px 15px 0;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageContainer .homeMessage {
+  margin-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 8px;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageContainer .homeMessage .message {
+  background: #7bed9f;
+  padding: 10px;
+  border-radius: 15px 15px 0 15px;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageContainer .homeMessage img {
+  width: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 30px;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageInput {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.0666666667);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 3px;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageInput input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 16px;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageInput input:focus {
+  border: none;
+  outline: none;
+}
+.userProfile__container .main .messages .searchUser .middle .chatBox .messageInput .MuiButton-root {
+  background: rgba(0, 0, 0, 0.0666666667);
+  color: #000;
+  font-size: 18px;
+  min-width: 0;
+  padding: 5px 20px;
+}
