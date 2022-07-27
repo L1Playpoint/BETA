@@ -79,7 +79,7 @@ const theme = useTheme();
   };
 
   return (
-    <div className='joinConversation__comtainer'>
+    <div className='joinConversation__container'>
 
     </div>
   )
