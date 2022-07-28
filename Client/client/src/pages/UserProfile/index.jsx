@@ -9,7 +9,6 @@ export default function UserProfile() {
   const [searchvalue, setSearchvalue] = React.useState("");
   const [filteredResults, setFilteredResults] = React.useState([]);
   const [messageBox, showMessageBox] = React.useState(false);
-  const [count,setCount] = React.useState(0)
   const [active, setActive] = React.useState({
     0: true,
     1: false,
@@ -19,11 +18,9 @@ export default function UserProfile() {
   const socketRef = React.useRef();
 
   console.log(active);
-  // const navigate = useNavigate();
 
   const toggle = (id) => {
     setActive({ [id]: !active[id] });
-    setCount(count + 1)
   };
 
   React.useEffect(() => {
@@ -92,8 +89,9 @@ export default function UserProfile() {
       <div className="main">
         <div className="dashboard">
           <Button
-            className={`dashboard ${active[0]  ? "active" : ""}`}
+            className={`dashboard ${active[0] ? "active" : ""}`}
             onClick={() => toggle(0)}
+            disabled = {active[0]}
           >
             <i className="ri-bubble-chart-fill"></i> Dashboard
           </Button>
@@ -101,6 +99,7 @@ export default function UserProfile() {
           <Button
             className={`${active[1] ? "active" : ""}`}
             onClick={() => toggle(1)}
+            disabled={active[1]}
           >
             <i className="ri-wallet-3-line"></i> Wallet
           </Button>
@@ -108,6 +107,7 @@ export default function UserProfile() {
           <Button
             className={`${active[2] ? "active" : ""}`}
             onClick={() => toggle(2)}
+            disabled={active[2]}
           >
             <i className="ri-ancient-gate-line"></i> History
           </Button>
@@ -115,6 +115,7 @@ export default function UserProfile() {
           <Button
             className={`${active[3] ? "active" : ""}`}
             onClick={() => toggle(3)}
+            disabled={active[3]}
           >
             <i className="ri-settings-4-line"></i> Settings
           </Button>
