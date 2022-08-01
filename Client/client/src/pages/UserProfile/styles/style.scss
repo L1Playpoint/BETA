@@ -72,6 +72,16 @@
       background: #fff;
       //   padding: 20px 0;
 
+      nav{
+        a{
+          text-decoration: none;
+        &.active{
+          background: #a29bfe;
+          color: #fff;
+        }
+        }
+
+      }
       .MuiButton-root {
         padding: 12px 20px;
         text-transform: capitalize;
@@ -82,7 +92,7 @@
         justify-content: left;
         gap: 8px;
         width: 100%;
-
+        
         &.active {
           background: #a29bfe;
           color: #fff;
@@ -93,6 +103,92 @@
     .main__container {
       flex: 1;
       padding: 0 20px;
+      height: 20vh;
+      
+
+      .balance__container {
+        margin: 10px;
+        display: flex;
+        justify-content: space-around;
+         height: 100%;
+         padding: 20px ;
+         background: #fff;
+         align-items: center;
+         border-radius: 15px;
+         box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
+        0 16px 32px -4px rgb(145 158 171 / 24%);
+         
+        .coins{
+          display: flex;
+          gap: 18px;
+
+        }
+
+        .image {
+          img {
+            height: 90px;
+            width: 90px;
+          }
+        }
+        .amount {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .sixty9{
+            font-size: 35px;
+            font-weight: 600;
+          }
+        }
+        .buttons{
+          height: 100%;
+          display: flex;
+          gap: 7px;
+          align-items: center; 
+          button{
+            color: #000;
+          }
+        }
+      }
+      .history__container{
+        .statement{
+          margin: 20px 0;
+          display: flex;
+          justify-content: space-between;
+          // background: #c3c3c3;
+          box-shadow: 0 0 2px 0 rgb(145 158 171 / 24%),
+        0 16px 32px -4px rgb(145 158 171 / 24%);
+          padding: 20px;
+          border-radius: 15px;
+          // border: 1px solid rgb(158, 148, 148);  
+          align-items: center;
+          p{
+            color: #0009;
+          }
+          .left{
+          
+          button{
+            background: red;
+            border-radius: 18px;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: capitalize;
+            padding: 5px 10px;
+            margin-bottom: 10px;
+          }
+          .incoming{
+            background: rgb(138, 211, 29);
+          }
+        }
+        .right{
+          .balance{
+            font-weight: 600;
+            font-size: 18px;
+            color: #000;
+          }
+        }
+        
+      }
+      }
     }
 
     .messages {

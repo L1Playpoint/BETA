@@ -1,8 +1,10 @@
 import { Button, Divider } from "@mui/material";
 import React from "react";
 import "./styles/style.css";
+import coinImage from "../../image/600282.png"
 
 export default function UserProfile() {
+  
   return (
     <div className="userProfile__container">
       <div className="userCover">
@@ -38,23 +40,82 @@ export default function UserProfile() {
 
       <div className="main">
         <div className="dashboard">
-          <Button>
+       <Button className="dashboard active" >
             <i className="ri-bubble-chart-fill"></i> Dashboard
           </Button>
           <Divider />
-          <Button className="active">
-            <i className="ri-wallet-3-line"></i> Wallet
+          <Button className="wallet" ><i className="ri-wallet-3-line" 
+            ></i> Wallet
           </Button>
           <Divider />
-          <Button>
+         
+          <Button className= "history">
             <i className="ri-ancient-gate-line"></i> History
           </Button>
+          
           <Divider />
-          <Button>
+          
+
+          <Button className= "settings">
             <i className="ri-settings-4-line"></i> Settings
           </Button>
+          
         </div>
-        <div className="main__container">history</div>
+        <div className="main__container">
+          <h1>Wallet</h1>
+          <div className="balance__container">
+           <div className="coins">
+           <div className="image">
+              <img
+                src={coinImage}
+                alt="coin img"
+              />
+            </div>
+            <div className="amount">
+              <p>Total Balance</p>
+              <p className="sixty9">$69,999</p>
+            </div>
+           </div>
+            <div className="buttons">
+              <Button variant="outlined">Withdraw</Button>
+              <Button variant="outlined">Sell</Button>
+              <Button variant="outlined">Buy</Button>
+            </div>
+          </div>
+          <div className="history__container">
+            <h1>History</h1>
+            <div className="statement">
+              <div className="left">
+              <Button variant="contained">Outgoing</Button>
+                <p>03/20/2022 | 12:35 PM</p>
+              </div>
+              <div className="right">
+              <p className="balance"> - $1506</p>
+              <p >Balance : $2,456</p>
+              </div>
+            </div>
+            <div className="statement">
+              <div className="left">
+              <Button className="incoming" variant="contained">Incoming</Button>
+                <p>03/20/2022 | 12:35 PM</p>
+              </div>
+              <div className="right">
+              <p className="balance"> + $1506</p>
+              <p >Balance : $2,456</p>
+              </div>
+            </div>
+            <div className="statement">
+              <div className="left">
+              <Button variant="contained">Outgoing</Button>
+                <p>03/20/2022 | 12:35 PM</p>
+              </div>
+              <div className="right">
+              <p className="balance"> - $1506</p>
+              <p >Balance : $2,456</p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="messages">
           <div className="searchUser">
             <i className="ri-search-line"></i>
